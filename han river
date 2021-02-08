@@ -1,0 +1,6 @@
+import requests
+url="http://hangang.dkserver.wo.tc/"
+json= requests.get(url).json()
+ranks = json.get("temp")
+while True:
+    print('오늘의 한강 수온은 '+ranks+'입니다.' , end="")
